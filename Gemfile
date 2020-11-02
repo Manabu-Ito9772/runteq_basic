@@ -2,9 +2,11 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
-gem 'font-awesome-rails'
-gem 'bootstrap', '>= 4.0.0', '< 5.0.0'
+gem 'font-awesome-sass', '~> 5.15.1'
+gem 'bootstrap', '~> 4.5.2'
 gem 'jquery-rails'
+gem 'sorcery'
+gem 'pry-byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
