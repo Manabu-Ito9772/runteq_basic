@@ -4,12 +4,20 @@ ja:
       title: 'ユーザー登録'
       register: '登録'
       to_login_page: 'ログインページへ'
+    create:
+      success: 'ユーザー登録が完了しました'
+      danger: 'ユーザー登録に失敗しました'
   user_sessions:
     new:
       title: 'ログイン'
       login: 'ログイン'
       to_register_page: '登録ページへ'
       forgot_password: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      danger: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
   shared:
     header:
       board: '掲示板'
