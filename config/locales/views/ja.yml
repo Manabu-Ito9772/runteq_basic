@@ -1,0 +1,22 @@
+ja:
+  users:
+    new:
+      title: 'ユーザー登録'
+      register: '登録'
+      to_login_page: 'ログインページへ'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      login: 'ログイン'
+      to_register_page: '登録ページへ'
+      forgot_password: 'パスワードをお忘れの方はこちら'
+  shared:
+    header:
+      board: '掲示板'
+      board_lists: '掲示板一覧'
+      create_board: '掲示板作成'
+      bookmark_lists: 'ブックマーク一覧'
+      profile: 'プロフィール'
+      logout: 'ログアウト'
+    before_login_header:
+      login: 'ログイン'

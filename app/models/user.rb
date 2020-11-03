@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  before_save :email_downcase
   authenticates_with_sorcery!
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
@@ -7,4 +8,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :last_name, presence: true, length: { maximum: 255 }
   validates :first_name, presence: true, length: { maximum: 255 }
+
+  def email_downcase
+    self.email = email.downcase
+  end
 end
