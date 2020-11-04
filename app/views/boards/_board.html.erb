@@ -1,5 +1,5 @@
 <div class="col-sm-12 col-lg-4 mb-3">
-  <div id="<%= board.id %>">
+  <div id="board-id-<%= board.id %>">
     <div class="card"><%= image_tag("board_placeholder.png", class: 'card-img-top', width: '300', height: '200') %>
       <div class="card-body">
         <h4 class="card-title">
@@ -14,8 +14,14 @@
           <% end %>
         </div>
         <ul class="list-inline">
-          <li class="list-inline-item"><i class="far fa-user"></i><%= board.user.decorate.full_name %></li>
-          <li class="list-inline-item"><i class="far fa-calendar"></i><%= l board.created_at, format: :long %></li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+            <%= board.user.decorate.full_name %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l board.created_at, format: :long %>
+          </li>
         </ul>
         <p class="card-text"><%= board.body %></p>
       </div>

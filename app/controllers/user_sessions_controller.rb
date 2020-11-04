@@ -6,7 +6,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to boards_path, success: t('.success')
     else
-      flash[:danger] = t('.danger')
+      flash.now[:danger] = t('.danger')
       render :new
     end
   end

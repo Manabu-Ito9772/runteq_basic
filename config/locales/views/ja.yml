@@ -1,4 +1,7 @@
 ja:
+  defaults:
+    message:
+      require_login: 'ログインしてください'
   users:
     new:
       title: 'ユーザー登録'
@@ -31,3 +34,9 @@ ja:
   boards:
     index:
       no_boards: '掲示板がありません'
+    new:
+      create_board: '掲示板作成'
+      create: '作成'
+    create:
+      success: '掲示板を作成しました'
+      danger: '掲示板を作成できませんでした'

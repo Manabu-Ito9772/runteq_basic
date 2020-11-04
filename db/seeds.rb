@@ -6,8 +6,8 @@
    password_confirmation: '12345')
  end
 
-users = User.all
-2.times do
-  users.each { |user| user.boards.create!(title: Faker::Lorem.sentence,
-                                           body: Faker::Lorem.sentence) }
-end
+ 20.times do |index|
+    Board.create!(user: User.offset(rand(User.count)).first,
+                 title: "タイトル#{index}",
+                  body: "本文#{index}")
+  end
