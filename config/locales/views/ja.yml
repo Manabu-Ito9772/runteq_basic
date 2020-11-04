@@ -28,3 +28,6 @@ ja:
       logout: 'ログアウト'
     before_login_header:
       login: 'ログイン'
+  boards:
+    index:
+      no_boards: '掲示板がありません'
