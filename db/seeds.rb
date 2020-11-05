@@ -4,10 +4,10 @@
                    email: Faker::Internet.email,
                 password: '12345',
    password_confirmation: '12345')
- end
+end
 
- 20.times do |index|
-    Board.create!(user: User.offset(rand(User.count)).first,
-                 title: "タイトル#{index}",
-                  body: "本文#{index}")
-  end
+20.times do |index|
+  Board.create!(user: User.offset(rand(User.count)).first,
+               title: "タイトル#{index}",
+                body: "本文#{index}")
+end
