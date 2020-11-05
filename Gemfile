@@ -9,6 +9,8 @@ gem 'sorcery'
 gem 'pry-byebug'
 gem 'rails-i18n', '~> 5.1'
 gem 'draper'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

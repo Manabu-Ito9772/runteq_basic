@@ -12,3 +12,4 @@ ja:
       board:
         title: 'タイトル'
         body: '本文'
+        image: 'サムネイル'

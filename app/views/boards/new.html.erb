@@ -12,6 +12,10 @@
           <%= f.label :body %>
           <%= f.text_area :body, class: 'form-control', rows: '10' %>
         </div>
+        <div class="form-group">
+          <%= f.label :image %>
+          <%= f.file_field :image, accept: 'image/jpg, image/jpeg, image/png, image/gif', class: 'form-control' %>
+        </div>
         <%= f.submit t('.create'), class: 'btn btn-primary' %>
       <% end %>
     </div>
