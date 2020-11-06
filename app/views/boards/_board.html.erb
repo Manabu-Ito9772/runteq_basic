@@ -1,14 +1,9 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="board-id-<%= board.id %>">
-    <div class="card">
-      <% if board.image? %>
-        <%= image_tag(board.image.url) %>
-      <% else %>
-        <%= image_tag('board_placeholder.png') %>
-      <% end %>
+    <div class="card"><%= image_tag(board.image_url) %>
       <div class="card-body">
         <h4 class="card-title">
-          <%= link_to(board.title, '#') %>
+          <%= link_to(board.title, board) %>
         </h4>
         <div class='mr10 float-right'>
           <%= link_to '#', id: 'button-edit-#{board.id}' do %>

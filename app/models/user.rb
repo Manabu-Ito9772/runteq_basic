@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   before_save :email_downcase
   has_many :boards, dependent: :destroy
+  has_many :comments, dependent: :destroy
   authenticates_with_sorcery!
 
   validates :last_name, presence: true, length: { maximum: 255 }

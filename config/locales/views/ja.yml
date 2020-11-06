@@ -1,5 +1,6 @@
 ja:
   defaults:
+    post: '投稿'
     message:
       require_login: 'ログインしてください'
   users:
@@ -34,9 +35,15 @@ ja:
   boards:
     index:
       no_boards: '掲示板がありません'
+    show:
+      board_details: '掲示板詳細'
     new:
       create_board: '掲示板作成'
       create: '登録する'
     create:
       success: '掲示板を作成しました'
       danger: '掲示板を作成できませんでした'
+  comments:
+    create:
+      success: 'コメントを作成しました'
+      danger: 'コメントを作成できませんでした'

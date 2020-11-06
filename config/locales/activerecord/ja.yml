@@ -13,3 +13,5 @@ ja:
         title: 'タイトル'
         body: '本文'
         image: 'サムネイル'
+      comment:
+        body: 'コメント'
