@@ -1,11 +1,11 @@
-<tr>
+<tr id="comment-<%= comment.id %>">
   <td style="width: 60px">
     <%= image_tag('sample.jpg', class: 'rounded-circle', width: '50', height: '50') %>
   </td>
   <td>
     <h3 class="small"><%= comment.user.decorate.full_name %></h3>
-    <div>
-      <p><%= comment.body %></p>
+    <div id="js-comment-<%= comment.id %>">
+      <%= simple_format(comment.body) %>
     </div>
     <div style="display: none;">
       <textarea class="form-control mb-1">コメントです</textarea>
