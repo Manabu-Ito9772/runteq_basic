@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-lg-8 offset-lg-2">
     <table id="js-table-comment" class="table">
-      <tr id="<% comment.id %>">
+      <tr id="comment-<% comment.id %>">
         <td style="width: 60px">
           <%= image_tag('sample.jpg', class: 'rounded-circle', width: '50', height: '50') %>
         </td>
         <td>
           <h3 class="small"><%= comment.user.decorate.full_name %></h3>
-          <div id="js-comment-25">
+          <div id="js-comment-<%= comment.id %>">
             <p><%= comment.body %></p>
           </div>
           <div style="display: none;">

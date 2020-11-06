@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
-
   def create
     comment = current_user.comments.build(comment_params)
-    if comment.save
+  　if comment.save
      redirect_to board_path(comment.board.id), success: t('.success')
-   else
+   elsif
      redirect_to board_path(comment.board.id), danger: t('.danger')
     end
   end
