@@ -1,5 +1,7 @@
 ja:
   defaults:
+    board_lists: '掲示板一覧'
+    create_board: '掲示板作成'
     post: '投稿'
     message:
       require_login: 'ログインしてください'
@@ -25,8 +27,6 @@ ja:
   shared:
     header:
       board: '掲示板'
-      board_lists: '掲示板一覧'
-      create_board: '掲示板作成'
       bookmark_lists: 'ブックマーク一覧'
       profile: 'プロフィール'
       logout: 'ログアウト'
