@@ -2,7 +2,11 @@ ja:
   defaults:
     board_lists: '掲示板一覧'
     create_board: '掲示板作成'
+    edit_board: '掲示板編集'
     post: '投稿'
+    update: '更新'
+    create: '登録する'
+    confirm: '削除しますか？'
     message:
       require_login: 'ログインしてください'
   users:
@@ -39,10 +43,14 @@ ja:
       board_details: '掲示板詳細'
     new:
       create_board: '掲示板作成'
-      create: '登録する'
     create:
       success: '掲示板を作成しました'
       danger: '掲示板を作成できませんでした'
+    update:
+      success: '掲示板を更新しました'
+      danger: '掲示板を更新できませんでした'
+    destroy:
+      success: '掲示板を削除しました'
   comments:
     create:
       success: 'コメントを作成しました'

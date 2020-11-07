@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def email_downcase
     self.email = email.downcase
   end
+
+  def own?(object)
+    id == object.user_id
+  end
 end

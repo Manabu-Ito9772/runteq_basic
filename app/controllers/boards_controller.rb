@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :require_login
+  before_action :correct_user, only: %i[edit update destroy]
 
   def index
     @boards = Board.all.includes(:user).order(created_at: :desc)
@@ -25,9 +26,29 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @board.update(board_params)
+      redirect_to board_path(@board), success: t('.success')
+    else
+      flash.now[:danger] = t('.danger')
+      render :edit
+    end
+  end
+
+  def destroy
+    @board.destroy
+    redirect_to boards_path, success: t('.success')
+  end
+
   private
 
   def board_params
     params.require(:board).permit(:title, :body, :image, :image_cache)
+  end
+
+  def correct_user
+    @board = current_user.boards.find(params[:id])
   end
 end
