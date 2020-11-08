@@ -1,6 +1,7 @@
 ja:
   defaults:
     no_boards: '掲示板がありません'
+    no_bookmark_boards: 'ブックマーク中の掲示板がありません'
     board_lists: '掲示板一覧'
     bookmark_lists: 'ブックマーク一覧'
     create_board: '掲示板作成'
