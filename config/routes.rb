@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   resources :users
   resources :boards do
     resources :comments, shallow: true
+    collection do
+      get :bookmarks
+    end
   end
+  resources :bookmarks
 end
