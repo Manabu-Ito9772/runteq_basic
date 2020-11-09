@@ -42,6 +42,10 @@ class BoardsController < ApplicationController
     redirect_to boards_path, success: t('.success')
   end
 
+  def bookmarks
+    @boards = current_user.favorite_boards.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def board_params

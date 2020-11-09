@@ -1,12 +1,15 @@
 ja:
   defaults:
     board_lists: '掲示板一覧'
+    bookmark_lists: 'ブックマーク一覧'
     create_board: '掲示板作成'
     edit_board: '掲示板編集'
     post: '投稿'
     update: '更新する'
     create: '登録する'
     confirm: '削除しますか？'
+    no_boards: '掲示板がありません'
+    no_bookmark_boards: 'ブックマーク中の掲示板がありません'
     message:
       require_login: 'ログインしてください'
   users:
@@ -37,8 +40,6 @@ ja:
     before_login_header:
       login: 'ログイン'
   boards:
-    index:
-      no_boards: '掲示板がありません'
     show:
       board_details: '掲示板詳細'
     new:
@@ -55,3 +56,8 @@ ja:
     create:
       success: 'コメントを作成しました'
       danger: 'コメントを作成できませんでした'
+  bookmarks:
+    create:
+      success: 'ブックマークしました'
+    destroy:
+      success: 'ブックマークを外しました'

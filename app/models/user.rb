@@ -2,6 +2,8 @@ class User < ApplicationRecord
   before_save :email_downcase
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :favorite_boards, through: :bookmarks, source: :board
   authenticates_with_sorcery!
 
   validates :last_name, presence: true, length: { maximum: 255 }
@@ -17,5 +19,17 @@ class User < ApplicationRecord
 
   def own?(object)
     id == object.user_id
+  end
+
+  def bookmark(board)
+    favorite_boards << board
+  end
+
+  def unbookmark(board)
+    bookmarks.find_by(board_id: board.id).destroy
+  end
+
+  def bookmark?(board)
+    favorite_boards.include?(board)
   end
 end

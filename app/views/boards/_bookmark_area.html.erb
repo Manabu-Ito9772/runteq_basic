@@ -1,0 +1,13 @@
+<% if current_user.bookmark?(board) %>
+  <ul class='crud-menu-btn list-inline float-right'>
+    <li class="list-inline-item">
+      <%= render 'unbookmark', board: board %>
+    </li>
+  </ul>
+<% else %>
+  <ul class='crud-menu-btn list-inline float-right'>
+    <li class="list-inline-item">
+      <%= render 'bookmark', board: board %>
+    </li>
+  </ul>
+<% end %>
