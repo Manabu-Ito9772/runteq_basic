@@ -8,7 +8,7 @@ ja:
     update: '更新する'
     create: '登録する'
     confirm: '削除しますか？'
-    no_results: '掲示板がありません'
+    no_results: '掲示板がありません。'
     no_bookmark_boards: 'ブックマーク中の掲示板がありません'
     message:
       require_login: 'ログインしてください'

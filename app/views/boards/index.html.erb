@@ -17,10 +17,8 @@
         <% if @boards.any? %>
           <%= render @boards %>
         <% else %>
-          <div class="alert alert-info">
-            <%= t('defaults.no_results') %>
-          </div>
-        <% end %>  
+          <%= t('defaults.no_results') %>
+        <% end %>
       </div>
     </div>
   </div>
