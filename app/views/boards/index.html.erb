@@ -14,13 +14,13 @@
   <div class="row">
     <div class="col-12">
       <div class="row">
-
-      <% if @boards.any? %>
-        <%= render @boards %>
-      <% else %>
-        <p><%= t('.no_boards') %></p>
-      <% end %>
-
+        <% if @boards.any? %>
+          <%= render @boards %>
+        <% else %>
+          <div class="alert alert-info">
+            <%= t('defaults.no_results') %>
+          </div>
+        <% end %>  
       </div>
     </div>
   </div>
