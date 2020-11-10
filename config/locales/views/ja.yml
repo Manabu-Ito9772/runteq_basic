@@ -12,6 +12,8 @@ ja:
     confirm: '削除しますか？'
     no_results: '掲示板がありません。'
     no_bookmark_boards: 'ブックマーク中の掲示板がありません'
+    key_words: '検索ワード'
+    search: '検索'
     message:
       require_login: 'ログインしてください'
   users:

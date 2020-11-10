@@ -3,7 +3,8 @@ class BoardsController < ApplicationController
   before_action :correct_user, only: %i[edit update destroy]
 
   def index
-    @boards = Board.all.includes(:user).order(created_at: :desc).page(params[:page])
+    @search = Board.ransack(params[:q])
+    @boards = @search.result(distinct: true).includes(:user, :bookmarks).order(created_at: :desc).page(params[:page])
   end
 
   def show
@@ -43,7 +44,8 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @boards = current_user.favorite_boards.includes(:user).order(created_at: :desc).page(params[:page])
+    @search = current_user.favorite_boards.ransack(params[:q])
+    @boards = @search.result(distinct: true).includes(:user, :bookmarks).order(created_at: :desc).page(params[:page])
   end
 
   private

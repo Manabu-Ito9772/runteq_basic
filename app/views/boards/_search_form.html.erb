@@ -1,0 +1,8 @@
+<%= search_form_for search, url: url do |f| %>
+  <div class="input-group mb-3">
+    <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.key_words') %>
+    <div class="input-group-append">
+      <%= f.submit t('defaults.search'), class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
