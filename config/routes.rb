@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
   delete '/logout', to: 'user_sessions#destroy'
+  get '/profile', to: 'profiles#show'
+  get '/profile/edit', to: 'profiles#edit'
   resources :users
   resources :boards do
     resources :comments, shallow: true

@@ -27,15 +27,14 @@
 
         <li class='nav-item dropdown dropdown-slide'>
           <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            <%= image_tag("sample.jpg", alt: "sample",
-                                      class: "rounded-circle mr15",
-                                      width: "40px",
-                                     height: "40px") %>
+            <%= image_tag(current_user.avatar.url, class: "rounded-circle mr15",
+                                                   width: "40px",
+                                                  height: "40px") %>
           </a>
           <div class='dropdown-menu dropdown-menu-right'>
             <div class='dropdown-item'><%= current_user.decorate.full_name %></div>
             <div class='dropdown-divider'></div>
-            <%= link_to (t '.profile'), '#', class: 'dropdown-item' %>
+            <%= link_to (t '.profile'), profile_path, class: 'dropdown-item' %>
             <%= link_to (t '.logout'), logout_path, method: :delete, class: 'dropdown-item' %>
           </div>
         </li>

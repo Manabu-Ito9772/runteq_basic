@@ -24,6 +24,9 @@ ja:
     create:
       success: 'ユーザー登録が完了しました'
       danger: 'ユーザー登録に失敗しました'
+    update:
+      success: 'ユーザーを更新しました'
+      danger: 'ユーザーを更新できませんでした'
   user_sessions:
     new:
       title: 'ログイン'
@@ -65,3 +68,12 @@ ja:
       success: 'ブックマークしました'
     destroy:
       success: 'ブックマークを外しました'
+  profiles:
+    show:
+      profile: 'プロフィール'
+      edit: '編集'
+      email: 'メールアドレス'
+      name: '氏名'
+      avatar: 'アバター'
+    edit:
+      title: 'プロフィール編集'
