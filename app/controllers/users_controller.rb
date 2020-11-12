@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_edit_params)
+    user = User.find_by(id: current_user.id)
+    if user.update(user_edit_params)
       redirect_to profile_path, success: t('.success')
     else
       flash.now[:danger] = t('.danger')

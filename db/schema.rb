@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_045554) do
+ActiveRecord::Schema.define(version: 2020_11_11_234630) do
 
   create_table "boards", force: :cascade do |t|
     t.string "title", null: false
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 2020_11_11_045554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
+    t.string "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

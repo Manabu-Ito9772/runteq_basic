@@ -1,15 +1,23 @@
 <% content_for(:title, t('.profile')) %>
-<div class="container">
+<div class="container pt-3">
   <div class="row">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t('.profile') %></h1>
-      <%= link_to t('.edit'), edit_profile_path, class: 'btn btn-success' %>
-      <h5><%= t('.email') %></h5>
-      <%= current_user.email %>
-      <h5><%= t('.name') %></h5>
-      <%= current_user.decorate.full_name %>
-      <h5><%= t('.avatar') %></h5>
-      <%= image_tag(current_user.avatar.url, class: "rounded-circle mr15", size: "50x50") %>
+      <h1 class="float-left mb-5"><%= t('.profile') %></h1>
+      <%= link_to t('.edit'), edit_profile_path, class: 'btn btn-success float-right' %>
+      <table class="table">
+        <tr>
+          <th scope="row"><%= User.human_attribute_name(:email) %></th>
+          <td><%= current_user.email %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= User.human_attribute_name(:full_name) %></th>
+          <td><%= current_user.decorate.full_name %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= User.human_attribute_name(:avatar) %></th>
+          <td><%= image_tag(current_user.avatar.url, class: "rounded-circle mr15", size: "50x50") %></td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>
