@@ -25,9 +25,6 @@ ja:
     create:
       success: 'ユーザー登録が完了しました'
       danger: 'ユーザー登録に失敗しました'
-    update:
-      success: 'ユーザーを更新しました'
-      danger: 'ユーザーを更新できませんでした'
   user_sessions:
     new:
       title: 'ログイン'
@@ -78,6 +75,9 @@ ja:
       avatar: 'アバター'
     edit:
       title: 'プロフィール編集'
+    update:
+      success: 'ユーザーを更新しました'
+      danger: 'ユーザーを更新できませんでした'
   password_resets:
     new:
       title: 'パスワードリセット申請'
@@ -87,7 +87,6 @@ ja:
       danger: '存在しないメールアドレスです'
     edit:
       title: 'パスワードリセット'
-      update: '更新'
     update:
       success: 'パスワードを変更しました'
       danger: 'パスワードを変更できませんでした'

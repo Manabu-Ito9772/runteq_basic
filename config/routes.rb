@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'user_sessions#destroy'
   get '/profile', to: 'profiles#show'
   get 'edit/profile', to: 'profiles#edit'
+  patch '/profile', to: 'profiles#update'
   resources :users
   resources :boards do
     resources :comments, shallow: true
