@@ -15,6 +15,7 @@ ja:
     key_words: '検索ワード'
     search: '検索'
     reset_mail_subject: 'パスワードリセット'
+    not_authorized: '権限がありません'
     message:
       require_login: 'ログインしてください'
   users:
@@ -90,3 +91,15 @@ ja:
     update:
       success: 'パスワードを変更しました'
       danger: 'パスワードを変更できませんでした'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+      index:
+        title: 'ダッシュボード'

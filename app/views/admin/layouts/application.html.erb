@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title><%= full_title(yield(:title), admin: true) %></title>
+  <%= stylesheet_link_tag 'admin', media: 'all' %>
+  <%= javascript_include_tag 'admin' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <%= render 'admin/shared/header' %>
+
+  <%= render 'admin/shared/menus' %>
+
+  <div class="content-wrapper">
+    <%= render 'shared/flash_message' %>
+    <%= yield %>
+  </div>
+
+  <%= render 'admin/shared/footer' %>
+</div>
+</body>
+</html>
