@@ -1,5 +1,5 @@
 class Admin::UserSessionsController < Admin::BaseController
-  before_action :require_login, only: :destroy
+  skip_before_action :require_login, only: %i[new create]
   skip_before_action :check_admin, only: %i[new create]
   layout 'layouts/admin_login'
 

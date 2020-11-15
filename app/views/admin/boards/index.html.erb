@@ -1,0 +1,43 @@
+<% content_for(:title, t('defaults.board_lists')) %>
+<div class="container mb-5 pt-2">
+  <h1><%= t('defaults.board_lists') %></h1>
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <%= search_form_for @search, url: admin_boards_path do |f| %>
+        <div class="row">
+          <div class="form-inline align-items-center mx-auto">
+            <div class="col-auto">
+              <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.key_words') %>
+            </div>
+            <div class="col-auto">
+              <%= f.date_field :created_at_gteq, class: 'form-control' %>
+              <span>〜</span>
+              <%= f.date_field :created_at_lteq_end_of_day, class: 'form-control' %>
+            </div>
+            <div class="col-auto">
+              <%= f.submit t('defaults.search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= Board.human_attribute_name(:id) %></th>
+        <th scope="col"><%= Board.human_attribute_name(:title) %></th>
+        <th scope="col"><%= Board.human_attribute_name(:user) %></th>
+        <th scope="col"><%= Board.human_attribute_name(:created_at) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @boards %>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <%= paginate @boards %>
+    </div>
+  </div>
+</div>

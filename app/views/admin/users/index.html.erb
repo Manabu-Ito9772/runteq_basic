@@ -1,0 +1,41 @@
+<% content_for(:title, t('.title')) %>
+<div class="container mb-5 pt-2">
+  <h1><%= t('.title') %></h1>
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <%= search_form_for @search, url: admin_users_path do |f| %>
+        <div class="row">
+          <div class="form-inline align-items-center mx-auto">
+            <div class="col-auto">
+              <%= f.search_field :last_name_or_first_name_cont, class: 'form-control', placeholder: t('defaults.key_words') %>
+            </div>
+            <div class="col-auto">
+              <%= f.select :role_eq, User.roles_i18n.invert.map{|key, value| [key, User.roles[value]]}, { include_blank: t('defaults.unspecified') }, { class: 'form-control mr-1' } %>
+            </div>
+            <div class="col-auto">
+              <%= f.submit t('defaults.search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= User.human_attribute_name(:id) %></th>
+        <th scope="col"><%= User.human_attribute_name(:full_name) %></th>
+        <th scope="col"><%= User.human_attribute_name(:role) %></th>
+        <th scope="col"><%= User.human_attribute_name(:created_at) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <%= paginate @users %>
+    </div>
+  </div>
+</div>
