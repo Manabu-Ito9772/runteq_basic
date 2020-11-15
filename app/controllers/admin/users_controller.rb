@@ -12,7 +12,7 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_users_path, success: t('.success')
+      redirect_to admin_user_path(@user), success: t('.success')
     else
       flash.now[:danger] = t('.danger')
       render :edit
