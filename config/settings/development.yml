@@ -1,1 +1,3 @@
 host: 'localhost:3000'
+slack:
+   exception_notification_channel: '#基礎編通知'
